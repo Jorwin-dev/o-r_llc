@@ -6,12 +6,14 @@ import Gallery from './pages/gallery/Gallery';
 import Contact from './pages/contact/Contact';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import Hero from './components/hero/Hero';
 import './App.css'; // Global Styles
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Hero />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/services' element={<Services />}/>
