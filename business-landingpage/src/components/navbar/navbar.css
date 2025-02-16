@@ -1,5 +1,5 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -8,8 +8,27 @@
   align-items: center;
   padding-top: 20px;
   background: transparent;
-  color: white;
   font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0) 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.navbar:hover::after {
+  opacity: 1;
 }
 
 .navbar-left {
@@ -24,8 +43,9 @@
 
 .navbar-title {
   font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  color: white;
 }
 
 .navbar-right {

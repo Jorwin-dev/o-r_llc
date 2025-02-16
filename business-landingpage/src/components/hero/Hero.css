@@ -33,10 +33,11 @@
     max-width: 300px;
     font-size: 1rem;
     z-index: 2;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-overlay h1 {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
 }
