@@ -1,7 +1,32 @@
 .footer {
-    background-color: #333;
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .footer-left a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .footer-right {
+    display: flex;
+    gap: 15px
+  }
+
+  .footer-right a {
+    text-decoration: none;
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  .footer-right a:hover {
+    color: #ddd;
   }
