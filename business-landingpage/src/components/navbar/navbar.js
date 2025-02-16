@@ -1,16 +1,20 @@
 import React from 'react';
 import './Navbar.css';
+import logo from '../../assets/O&R_Logo_no_number.png'
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>Landscaping Business</h1>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+      <div className='navbar-left'>
+        <img src={logo} alt='Company Logo' className='navbar-logo'/>
+        <span className='navbar-title'>O&R LANDSCAPING & CONSTRUCTION</span>
+      </div>
+      <div className='navbar-right'>
+        <a href="/">HOME</a>
+        <a href="/services">SERVICES</a>
+        <a href="/gallery">GALLERY</a>
+        <a href="/contact">CONTACT</a>
+      </div>
     </nav>
   );
 };
