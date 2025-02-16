@@ -29,8 +29,7 @@ const Hero = () => {
 
         {/* Text Overlay */}
         <div className='hero-overlay'>
-            <h1>O&R Landscaping & Construction</h1>
-            <p>Professional Landscaping, Masonry, Fences & More!</p>
+            <h1>Professional Landscaping, Masonry, Fences & More!</h1>
         </div>
     </div> 
     );

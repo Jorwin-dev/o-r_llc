@@ -1,13 +1,11 @@
 import React from 'react';
-import './Home.css';
+import Hero from '../../components/hero/Hero'
 
 const Home = () => {
   return (
-    <div className="home">
-      <h1>Welcome to Our Landscaping Business</h1>
-      <p>Transforming outdoor spaces into beautiful landscapes.</p>
-      <button>Get a Free Quote</button>
-    </div>
+   <div>
+    <Hero />
+   </div>
   );
 };
 

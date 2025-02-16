@@ -25,20 +25,18 @@
 /* Text Overlay */
 .hero-overlay {
     position: absolute;
-    text-align: center;
+    bottom: 5%;
+    left: 5%;
+    text-align: left;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px 50px;
-    border-radius: 10px;
-    max-width: 50%;
-    font-size: 1.8rem;
+    border-radius: 8px;
+    max-width: 300px;
+    font-size: 1rem;
     z-index: 2;
 }
 
 .hero-overlay h1 {
-    font-size: 2.5rem;
-}
-
-.hero-overlay p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 }
