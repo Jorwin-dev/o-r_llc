@@ -62,7 +62,7 @@
 }
 
 .contact-form button {
-  background: #c81d1d;
+  background: #f21d2f;
   color: white;
   padding: 8px 13px;
   border: none;
@@ -73,7 +73,7 @@
 }
 
 .contact-form button:hover {
-  background: #B71a1a;
+  background: #c81d1d;
 }
 
 /* Google Map */

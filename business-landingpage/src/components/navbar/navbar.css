@@ -60,9 +60,11 @@
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color 0.3s;
+  transition: transform 0.3s ease-in-out;
 }
 
 .navbar-right a:hover {
   color: #ddd;
+  text-decoration: none;
+  transform: scale(1.1);
 }

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className='footer-left'>
-          <a href='/home'>Copyright © 2025</a> 
+          <a href='/'>Copyright © 2025</a> 
           <p> | </p>
           <a href='https://www.linkedin.com/in/jorwin-reyes-191b26257/' target='_blank' rel='noopener noreferrer' className='footer-link'> 
           Site Design 
