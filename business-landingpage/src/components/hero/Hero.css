@@ -34,10 +34,20 @@
     font-size: 1rem;
     z-index: 2;
     font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Smooth fade-in effect */
+}
+
+/* Smooth fade-in for text */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-overlay h1 {
     font-size: 19px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }

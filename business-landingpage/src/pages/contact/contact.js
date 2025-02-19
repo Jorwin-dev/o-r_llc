@@ -26,7 +26,7 @@ const Contact = () => {
           <div className='contact-map'>
           <iframe 
             title='Company Location'
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.038654749189!2d-71.24145112362154!3d42.36301547119261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e382e03d922629%3A0xabb83e3cd2b32de!2s777%20Moody%20St%2C%20Waltham%2C%20MA%2002453!5e0!3m2!1sen!2sus!4v1739822331736!5m2!1sen!2sus" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47149.08449822994!2d-71.28130343857426!3d42.38902812444292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e377e1771ae4dd%3A0xdeda87621afe5ac4!2sWaltham%2C%20MA!5e0!3m2!1sen!2sus!4v1739990066910!5m2!1sen!2sus" 
             width="600" 
             height="450" 
             style={{ border: 0 }} 
