@@ -1,34 +1,77 @@
-.gallery {
-    padding: 20px;
-    text-align: center;
+/* Gallery Container */
+.gallery-container {
+  padding: 40px 20px;
+  background: #121212; /* Dark background for contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Images */
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-lightbox:hover {
+  transform: scale(1.2);
+}
+
+/* Lightbox Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .gallery h1 {
-    font-size: 2rem;
-    color: #333;
+  to {
+    opacity: 1;
   }
-  
-  .gallery p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    padding: 0 20px;
-  }
-  
-  .image-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .image-grid img:hover {
-    transform: scale(1.05);
-  }
+}
