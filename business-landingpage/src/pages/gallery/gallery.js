@@ -7,8 +7,13 @@ import img3 from "../../assets/O&R_Fall-3.JPG";
 import img4 from "../../assets/O&R_Fall-4.JPG";
 import img5 from "../../assets/O&R_Fall-5.JPG";
 import img6 from "../../assets/O&R_Fall-6.JPG";
+import img7 from "../../assets/patio_driveway-ext_sodding-1.JPG";
+import img8 from "../../assets/patio_driveway-ext_sodding-1.JPG";
+import img9 from "../../assets/patio_fence1.JPG";
+import img10 from "../../assets/patio_fence2.JPG";
+import img11 from "../../assets/mulching_cleanup.JPG";
 
-const images = [img1, img2, img3, img4, img5, img6];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
