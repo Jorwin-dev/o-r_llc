@@ -37,6 +37,9 @@ const Reviews = () => {
 
   return (
     <div className="reviews-container">
+        {/* Darkened Background */}
+      <div className='reviews-bg'></div>
+      
       <div className="review-form">
         <h2>Leave a Review</h2>
         <form onSubmit={handleSubmit}>

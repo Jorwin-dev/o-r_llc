@@ -6,6 +6,7 @@ import Gallery from './pages/gallery/Gallery';
 import Contact from './pages/contact/Contact';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import Reviews from './pages/reviews/Reviews'
 import './App.css'; // Global Styles
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/services' element={<Services />}/>
         <Route path='/gallery' element={<Gallery />}/>
+        <Route path='/reviews' element={<Reviews />}/>
         <Route path='/contact' element={<Contact />}/>
       </Routes>
       <Footer />
