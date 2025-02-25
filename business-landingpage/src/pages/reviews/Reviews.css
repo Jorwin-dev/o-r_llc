@@ -1,0 +1,130 @@
+/* Reviews Section */
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 20px;
+    background: url("../../assets/snow_night.JPG") no-repeat center center/cover;
+    position: relative;
+  }
+  
+  .reviews-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+  }
+  
+  .reviews-content {
+    display: flex;
+    max-width: 1300px;
+    width: 100%;
+    gap: 50px;
+    z-index: 1;
+  }
+  
+  /* Review Form */
+  .review-form-container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .review-form-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .review-form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .review-form input,
+  .review-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .review-form textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .review-form .rating-stars {
+    display: flex;
+    gap: 5px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  .review-form button {
+    background: #e63946;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .review-form button:hover {
+    background: #d62828;
+  }
+  
+  /* Reviews Display */
+  .reviews-list-container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 600px;
+  }
+  
+  .review-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .review-item:last-child {
+    border-bottom: none;
+  }
+  
+  .review-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .review-item .review-rating {
+    color: #f4b400;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .review-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .review-item .review-date {
+    font-size: 14px;
+    color: #888;
+  }
+  
