@@ -1,7 +1,11 @@
-import express from "express";
+/*import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import dotenv from "dotenv";
+import dotenv from "dotenv";*/
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const dotenv = require("dotenv");
 
 dotenv.config();
 const app = express();
@@ -15,9 +19,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.error("MongoDB Connection Error:", err));
+  .catch(err => console.error(err));
 
 // Review Schema with Validation
 const reviewSchema = new mongoose.Schema({
@@ -31,11 +35,10 @@ const reviewSchema = new mongoose.Schema({
 const Review = mongoose.model("Review", reviewSchema);
 
 // API Routes
-
 // Fetch All Reviews (Newest First)
 app.get("/reviews", async (req, res) => {
   try {
-    const reviews = await Review.find().sort({ date: -1 });
+    const reviews = await Review.find().sort({ date: -1 }); // Show latest reviews first
     res.json(reviews);
   } catch (error) {
     res.status(500).json({ error: "Error fetching reviews" });
