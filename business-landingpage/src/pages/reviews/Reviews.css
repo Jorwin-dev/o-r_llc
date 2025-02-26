@@ -1,12 +1,18 @@
+/* Apply font to the entire page */
+p, h1, h2 {
+    font-family: 'Poppins', sans-serif; /* Or any other font you prefer */
+}
+
 /* Reviews Section */
 .reviews-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 100px 20px;
-    min-height: 100vh;
+    padding: 100px 20px 20px;
+    min-height: 100vh;  /* Can Remove */
     position: relative;
+    margin: auto;
 }
 
 /* Background Image with Dark Overlay */
@@ -24,27 +30,31 @@
 /* Main Reviews Content */
 .reviews-content {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 1300px;
+    flex-wrap: wrap;    /* Can Remove */
+    max-width: 1300px; /* Reduce to 1200*/
     width: 100%;
     gap: 40px;
-    z-index: 1;
+    z-index: 1; /* Can Remove */
+
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 /* Review Form Container */
 .review-form {
     flex: 1;
-    min-width: 400px;
-    background: rgba(255, 255, 255, 0.9);
+    min-width: 400px;   /* Set min to 400, max to 550 */
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Can Remove */
 }
 
 .review-form h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #333;
+    color: white;
     margin-bottom: 15px;
 }
 
@@ -57,17 +67,18 @@
 .review-form label {
     font-size: 16px;
     font-weight: 600;
-    color: #444;
+    color: white;
 }
 
 .review-form input,
 .review-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 5px;
     font-size: 16px;
-    background: white;
+    background: rgba(255, 255,  255, 0.2);
+    font-family: 'Poppins', sans-serif;
 }
 
 .review-form textarea {
@@ -76,7 +87,8 @@
 }
 
 .review-form button {
-    background: #e63946;
+    background: #f21d2f;
+    width: 50%;
     color: white;
     padding: 12px;
     font-size: 18px;
@@ -85,6 +97,10 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
+
+    display: block;
+    margin: 10px auto 0 auto;
+    text-align: center;
 }
 
 .review-form button:hover {
@@ -95,10 +111,10 @@
 .reviews-list {
     flex: 1;
     min-width: 400px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 8px;
-    max-height: 600px;
+    max-height: 622px;
     overflow-y: auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -106,13 +122,31 @@
 .reviews-list h2 {
     font-size: 24px;
     font-weight: 700;
-    color: #333;
+    color: white;
     margin-bottom: 15px;
+}
+
+.reviews-list::-webkit-scrollbar {
+    width: 8px; /* Smaller width */
+}
+
+.reviews-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Subtle background */
+    border-radius: 10px;
+}
+
+.reviews-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* Light gray scrollbar */
+    border-radius: 10px;
+}
+
+.reviews-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5); /* Slightly more visible on hover */
 }
 
 .review-item {
     padding: 15px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .review-item:last-child {
@@ -123,6 +157,7 @@
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 5px;
+    color: white;
 }
 
 .review-item .rating {
@@ -133,10 +168,30 @@
 
 .review-item p {
     font-size: 16px;
-    color: #555;
+    color: #ddd;
 }
 
 .review-item strong {
     font-size: 14px;
-    color: #888;
+    color: #bbb;
+}
+
+.review-form, .reviews-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .reviews-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-form-container,
+    .reviews-list-container {
+        width: 90%;
+        max-width: 600px;
+    }
 }

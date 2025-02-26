@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Reviews.css";
+import StarRating from "../../components/rating/StarRating";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -39,20 +40,12 @@ const Reviews = () => {
     <div className="reviews-container">
         {/* Darkened Background */}
       <div className='reviews-bg'></div>
-      
+
       <div className="review-form">
         <h2>Leave a Review</h2>
         <form onSubmit={handleSubmit}>
           <label>Your Rating:</label>
-          <input
-            type="number"
-            name="rating"
-            value={formData.rating}
-            min="1"
-            max="5"
-            onChange={handleChange}
-            required
-          />
+          <StarRating setFormData={setFormData} formData={formData} />
           <label>Title:</label>
           <input
             type="text"

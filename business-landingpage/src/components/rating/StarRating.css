@@ -1,0 +1,29 @@
+/* Star Rating */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+.star {
+    transition: color 0.2s ease-in-out;
+    font-size: 36px;
+    color: #888;
+    cursor: pointer;
+}
+
+.star:hover {
+    color: gold;
+}
+
+.star-selected {
+    color: #f4b400;
+}
+
+.rating-container {
+    padding: 1px;
+    border-radius: 5px;
+  }
+  
