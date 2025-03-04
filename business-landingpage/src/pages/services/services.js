@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './Services.css'; 
 
 const servicesData = [
@@ -20,12 +20,25 @@ const Services = () => {
     const servicesRef = useRef(null);
     const galleryRef = useRef(null);
 
-    const scroll = (ref, direction) => {
-        if (ref.current) {
-            const scrollAmount = 300; // Adjust scroll distance
-            ref.current.scrollLeft += direction === 'left' ? -scrollAmount : scrollAmount;
-        }
-    };
+     // Function to auto-scroll both carousels
+     useEffect(() => {
+        const autoScroll = (ref) => {
+            if (ref.current) {
+                ref.current.scrollLeft += 1;
+                if (ref.current.scrollLeft >= ref.current.scrollWidth / 2) {
+                    ref.current.scrollLeft = 0; // Reset for seamless looping
+                }
+            }
+        };
+
+        const servicesInterval = setInterval(() => autoScroll(servicesRef), 50); // Adjust speed here
+        const galleryInterval = setInterval(() => autoScroll(galleryRef), 50);
+
+        return () => {
+            clearInterval(servicesInterval);
+            clearInterval(galleryInterval);
+        };
+    }, []);
 
     return (
         <div className="about-services-container">
@@ -46,20 +59,16 @@ const Services = () => {
                 </div>
             </section>
 
-            {/* Services Section with Carousel */}
+            {/* Services Section with Auto-Scroll Carousel */}
             <section className="services">
                 <h2>Our Services</h2>
-                <div className="carousel-container">
-                    <button className="scroll-btn left" onClick={() => scroll(servicesRef, 'left')}>&#10094;</button>
-                    <div className="services-carousel" ref={servicesRef}>
-                        {servicesData.map(service => (
-                            <div key={service.id} className="service-card">
-                                <img src={service.image} alt={service.title} />
-                                <h3>{service.title}</h3>
-                            </div>
-                        ))}
-                    </div>
-                    <button className="scroll-btn right" onClick={() => scroll(servicesRef, 'right')}>&#10095;</button>
+                <div className="carousel-container" ref={servicesRef}>
+                    {servicesData.concat(servicesData).map((service, index) => (
+                        <div key={index} className="service-card">
+                            <img src={service.image} alt={service.title} />
+                            <h3>{service.title}</h3>
+                        </div>
+                    ))}
                 </div>
             </section>
 
@@ -79,19 +88,15 @@ const Services = () => {
                 </div>
             </section>
 
-            {/* Gallery Section with Carousel */}
+            {/* Gallery Section with Auto-Scroll Carousel */}
             <section className="gallery">
                 <h2>Our Recent Projects</h2>
-                <div className="carousel-container">
-                    <button className="scroll-btn left" onClick={() => scroll(galleryRef, 'left')}>&#10094;</button>
-                    <div className="gallery-carousel" ref={galleryRef}>
-                        {galleryData.map(project => (
-                            <div key={project.id} className="gallery-card">
-                                <img src={project.image} alt="Project" />
-                            </div>
-                        ))}
-                    </div>
-                    <button className="scroll-btn right" onClick={() => scroll(galleryRef, 'right')}>&#10095;</button>
+                <div className="carousel-container" ref={galleryRef}>
+                    {galleryData.concat(galleryData).map((project, index) => (
+                        <div key={index} className="gallery-card">
+                            <img src={project.image} alt="Project" />
+                        </div>
+                    ))}
                 </div>
             </section>
         </div>

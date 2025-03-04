@@ -6,6 +6,7 @@
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
   url('../../assets/snow_night.JPG') no-repeat center center/cover;
+  overflow-x: hidden; /* Prevents unwanted horizontal scroll */
 }
 
 /* About Us Section */
@@ -53,6 +54,8 @@
 /* Services Section */
 .services {
   margin-top: 60px;
+  position: relative;
+  overflow: hidden;
 }
 
 .services h2 {
@@ -75,15 +78,31 @@
   width: 100%;
 }
 
+/* Infinite Scroll Animation */
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* Services Carousel */
 .services-carousel {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Hide scrollbar */
-  padding: 20px;
   white-space: nowrap;
+  animation: infiniteScroll 15s linear infinite;
+
+  /**padding: 20px;
+  overflow-x: auto;**/
+}
+
+.services-carousel:hover {
+  animation-play-state: paused; /* Pause on hover */
 }
 
 .services-carousel::-webkit-scrollbar {
@@ -118,30 +137,7 @@
 
 /* Scroll Buttons */
 .scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 50%;
-  z-index: 10;
-  transition: background 0.3s ease-in-out;
-}
-
-.scroll-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.left {
-  left: 10px;
-}
-
-.right {
-  right: 10px;
+  display: none;
 }
 
 /* Key Features Section */
@@ -169,6 +165,8 @@
 /* Gallery Section */
 .gallery {
   margin-top: 60px;
+  position: relative;
+  overflow: hidden;
 }
 
 .gallery h2 {
@@ -189,6 +187,12 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
   padding: 20px;
+  white-space: nowrap;
+  animation: infinteScroll 15s linear infinite;
+}
+
+.gallery-carousel:hover {
+  animation-play-state: paused;
 }
 
 .gallery-carousel::-webkit-scrollbar {
