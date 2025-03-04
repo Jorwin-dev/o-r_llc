@@ -1,19 +1,19 @@
 import React, { useRef } from 'react';
-import './Services.css'; // Ensures styling matches your current aesthetic
+import './Services.css'; 
 
 const servicesData = [
-    { id: 1, title: 'Fall Cleanup', image: '/assets/fall_cleanup.jpg' },
-    { id: 2, title: 'Patio & Driveway', image: '/assets/patio_driveway.jpg' },
-    { id: 3, title: 'Mulching & Sodding', image: '/assets/mulching.jpg' },
-    { id: 4, title: 'Landscaping', image: '/assets/landscaping.jpg' },
-    { id: 5, title: 'Fence Installation', image: '/assets/fence_install.jpg' }
+    { id: 1, title: 'Fall Cleanup', image:  require('../../assets/O&R_Fall-1.JPG') },
+    { id: 2, title: 'Patio & Driveway', image: require('../../assets/driveway_transform-3.jpg') },
+    { id: 3, title: 'Mulching & Sodding', image: require('../../assets/patio_driveway-ext_sodding-1.JPG') },
+    { id: 4, title: 'Landscaping', image: require('../../assets/banda_nenatural2.JPG') },
+    { id: 5, title: 'Fence Installation', image: require('../../assets/fence_repair-1.jpg') }
 ];
 
 const galleryData = [
-    { id: 1, image: '/assets/front_house_res-6.jpg' },
-    { id: 2, image: '/assets/outdoor_home-6.jpg' },
-    { id: 3, image: '/assets/pool_wall-4.jpg' },
-    { id: 4, image: '../../assets/driveway_transform-2.jpg' }
+    { id: 1, image: require('../../assets/front_house_res-6.jpg') },
+    { id: 2, image: require('../../assets/outdoor_home-6.jpg') },
+    { id: 3, image: require('../../assets/pool_wall-4.jpg') },
+    { id: 4, image: require('../../assets/driveway_transform-2.jpg') }
 ];
 
 const Services = () => {
@@ -40,10 +40,9 @@ const Services = () => {
                         beautiful outdoor spaces tailored to our clients' visions.
                     </p>
                     <p><strong>Eco-friendly, licensed, and insured for residential & commercial projects.</strong></p>
-                    <button className="learn-more">Learn More</button>
                 </div>
                 <div className="about-image">
-                    <img src="/assets/about-us.jpg" alt="Landscaping project" />
+                    <img src={require("../../assets/O&R_Logo_w_number.png")} alt="Landscaping project" />
                 </div>
             </section>
 

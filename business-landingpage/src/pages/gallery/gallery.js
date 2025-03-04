@@ -38,7 +38,6 @@ import img33 from "../../assets/front_house_res-6.jpg";
 import img34 from "../../assets/groundskeeping-1.webp";
 import img35 from "../../assets/groundskeeping-2.webp";
 import img36 from "../../assets/groundskeeping-3.webp";
-import img37 from "../../assets/groundskeeping-4.webp";
 import img38 from "../../assets/outdoor_home-1.jpg";
 import img39 from "../../assets/outdoor_home-2.jpg";
 import img40 from "../../assets/outdoor_home-3.jpg";
@@ -118,8 +117,8 @@ const projectGroups = [
   },
   {
     title: "Groundskeeping",
-    coverImage: img37,
-    images: [img34, img35, img36, img37],
+    coverImage: img34,
+    images: [img34, img35, img36],
   },
   {
     title: "Outdoor Home Restoration",

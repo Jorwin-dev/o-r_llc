@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 // Importing images
-import img1 from '../../assets/groundskpeeing2.JPG';
-import img2 from '../../assets/mulching_cleanup.JPG';
-import img3 from '../../assets/O&R_Fall-1.JPG';
-import img4 from '../../assets/O&R_Fall-4.JPG';
-import img5 from '../../assets/patio_driveway-ext_sodding-2.JPG';
-import img6 from '../../assets/snow_night.JPG';
+import img1 from '../../assets/Homepage_display-1.jpg';
+import img2 from '../../assets/Homepage_display-2.jpg';
+import img3 from '../../assets/Homepage_display-3.jpg';
+import img4 from '../../assets/Homepage_display-4.jpg';
+import img5 from '../../assets/Homepage_display-5.jpg';
+import img6 from '../../assets/Homepage_display-6.jpg';
 
 const images = [img1, img2, img3, img4, img5, img6];
 
