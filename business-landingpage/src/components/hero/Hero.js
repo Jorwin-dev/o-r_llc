@@ -13,12 +13,12 @@ const images = [img1, img2, img3, img4, img5, img6];
 
 // Array of text matching images
 const services = [
-  "Expert Landscaping Services",
-  "Mulching & Cleanup",
+  "Softscaping",
+  "Hardscaping",
   "Seasonal Fall Maintenance",
+  "Snow Removal & Winter Services",
   "Garden & Lawn Care",
-  "Patios, Driveways & Sodding",
-  "Snow Removal & Winter Services"
+  "Grass Laying & Sodding"
 ];
 
 const Hero = () => {
