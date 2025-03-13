@@ -16,8 +16,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("../../assets/snow_night.JPG") no-repeat center center/cover;
-  filter: brightness(0.3);
+  background: url("../../assets/alternate-back2.webp") no-repeat center center/cover;
+  filter: brightness(0.2);
   z-index: 0;
 }
 

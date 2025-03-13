@@ -23,14 +23,36 @@ const services = [
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const[imagesLoaded, setImagesLoaded] = useState(false); // Track if images are fully loaded
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // Change every 5 seconds
+    // Preload images
+    const loadImages = async () => {
+      const promises = images.map((src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      });
 
-    return () => clearInterval(interval);
+      await Promise.all(promises);  // Wait for all images to load
+      setImagesLoaded(true);    // Set imagesLoaded to true
+    };
+
+    loadImages();
   }, []);
+
+  useEffect(() => {
+    if (imagesLoaded) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }, 5000); // Change every 5 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [imagesLoaded]); // Only start the slideshow after the images are loaded
 
   return (
     <div className='hero'>
@@ -44,6 +66,11 @@ const Hero = () => {
       <div className='hero-overlay'>
         <h1>{services[currentIndex]}</h1> {/* Dynamic text update */}
       </div>
+
+      {/* Loading Spinner */}
+      {!imagesLoaded && (
+        <div className='loading-spinner'>Loading...</div>
+      )}
     </div>
   );
 };

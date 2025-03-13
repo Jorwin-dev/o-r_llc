@@ -31,10 +31,7 @@
     color: white;
     border-radius: 8px;
     max-width: 300px;
-    font-size: 1rem;
     z-index: 2;
-    font-family: 'Poppins', sans-serif;
-    opacity: 0;
     animation: fadeIn 1s ease-in-out forwards; /* Smooth fade-in effect */
 }
 
@@ -45,9 +42,20 @@
 }
 
 .hero-overlay h1 {
-    font-size: 19px;
+    font-size: 30px;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    z-index: 1;
 }
