@@ -66,13 +66,14 @@ const Services = () => {
                 <div className="about-text">
                     <h2>About Our Company</h2>
                     <p>
-                    We offer all kinds of Professional services. 
-                    We take pride in customer satisfaction, and will 
-                    go the extra step to leave a smile on every customers face. 
-                    With affordable pricing we offer services for Landscaping, Masonry, 
-                    Fences, and all kinds more!
+                    Experience a tradition of customer satisfaction that exceeds expectations. 
+                    From start to finish we work with you every step of the way, ensuring our professionalism 
+                    and quality workmanship reflect your taste and lifestyle. We take pride in going the extra step to leave 
+                    a smile on every customer's face, offering affordable pricing without compromising on quality. Whether you 
+                    need Landscaping, Masonry, Fences, or more, we are here to take care of your unique needs with honesty, ethics, 
+                    and clear communication. Call us today; you will be glad you did. Remember, no job is too small!
                     </p>
-                    <p><strong>No Job Is Too Small!</strong></p>
+                    <p><strong>In Business Since 2017</strong></p>
                 </div>
                 <div className="about-image">
                     <img src={require("../../assets/O&R_Logo_w_number.png")} alt="Landscaping project" />

@@ -4,9 +4,8 @@
   margin: auto;
   padding: 100px 20px;
   color: white;
-  background: linear-gradient(rgba(0, 0, 0, .92), rgba(0, 0, 0, .92)),
+  background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .92)),
   url('../../assets/alternate-back2.webp') no-repeat center center/cover;
-  /* url('../../assets/snow_night.JPG') no-repeat center center/cover; */
   overflow-x: hidden; /* Prevents unwanted horizontal scroll */
 }
 

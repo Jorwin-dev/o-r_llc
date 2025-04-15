@@ -54,10 +54,10 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   border: none;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
 }
 
