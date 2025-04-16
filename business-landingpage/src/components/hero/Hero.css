@@ -20,6 +20,7 @@
     background-position: center;
     z-index: -2;
     transition: background-image 1s ease-in-out; /* Smooth Transition */
+    /*ADDED*/ background-repeat: no-repeat;
 }
 
 /* Text Overlay */
@@ -27,6 +28,7 @@
     position: absolute;
     bottom: 5%;
     left: 5%;
+    /*ADDED*/ right: 5%;
     text-align: left;
     color: white;
     border-radius: 8px;
@@ -59,3 +61,30 @@
     color: white;
     z-index: 1;
 }
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+  
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* THIS IS CRITICAL */
+}
+  
+@media (max-width: 400px) {
+    .hero-overlay {
+      max-width: 90%;
+      left: 5%;
+      right: 5%;
+    }
+}
+  

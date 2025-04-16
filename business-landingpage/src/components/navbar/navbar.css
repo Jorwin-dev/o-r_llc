@@ -68,3 +68,41 @@
   text-decoration: none;
   transform: scale(1.1);
 }
+
+
+
+
+
+
+
+
+
+
+/* Media query to fix small screen behavior */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .navbar-left {
+    margin-bottom: 10px;
+  }
+
+  .navbar-right {
+    flex-wrap: wrap; /* allows content to break into new lines */
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .navbar-right a {
+    font-size: 12px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
