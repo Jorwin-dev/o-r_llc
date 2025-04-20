@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
+
+  const [status, setStatus] = useState(null); // null | 'success' | 'error'
   const [formData, setFormData] = useState({
     name: '',
     email:'',
@@ -23,11 +25,11 @@ const Contact = () => {
       });
 
       if (res.ok) {
-        alert('Message sent successfully!');
+        alert('success');
         setFormData({ name: '', email: '', subject: '', message: ''});
       } else {
-        const data = await res.json();
-        alert(`Error: ${data.error}${data.details ? ' - ' + data.details : ''}`);
+        //const data = await res.json();
+        setStatus('error');
       }
     } catch (err) {
       alert('Failed to send message.');
@@ -53,6 +55,17 @@ const Contact = () => {
               <textarea name='message' placeholder='Message' rows='4' value={formData.message} onChange={handleChange} required></textarea>
               <button type='submit'>Send Message</button>
             </form>
+
+            {status === 'success' && (
+              <div className="form-status success">
+                ✅ Message sent! We'll get back to you soon.
+              </div>
+            )}
+            {status === 'error' && (
+              <div className="form-status error">
+                ❌ Something went wrong. Please try again.
+              </div>
+            )}
           </div>
 
           {/* Right Side: Google Map */}
