@@ -27,7 +27,7 @@ const Contact = () => {
         setFormData({ name: '', email: '', subject: '', message: ''});
       } else {
         const data = await res.json();
-        alert(`Error: ${data.error}`);
+        alert(`Error: ${data.error}${data.details ? ' - ' + data.details : ''}`);
       }
     } catch (err) {
       alert('Failed to send message.');
