@@ -12,7 +12,7 @@ import img7 from "../../assets/patio_driveway-ext_sodding-1.JPG";
 import img8 from "../../assets/patio_driveway-ext_sodding-2.JPG";
 import img9 from "../../assets/patio_fence1.JPG";
 import img10 from "../../assets/patio_fence2.JPG";
-import img11 from "../../assets/mulching_cleanup.JPG";
+import img11 from "../../assets/mulching_cleanup-4.JPG";
 import img12 from "../../assets/groundskeeping1.JPG";
 import img13 from "../../assets/groundskpeeing2.JPG";
 import img14 from "../../assets/driveway_ext_and_mulch1.JPG";
@@ -57,6 +57,16 @@ import img53 from "../../assets/pool_wall-7.jpg";
 import img54 from "../../assets/pool_wall-8.jpg";
 import img55 from "../../assets/pool_wall-9.jpg";
 import img56 from "../../assets/pool_wall-10.jpg";
+import img58 from "../../assets/groundskeeping-5.jpeg";
+import img59 from "../../assets/groundskeeping-6.jpeg";
+import img60 from "../../assets/mulching_cleanup-1.jpeg";
+import img61 from "../../assets/mulching_cleanup-2.jpeg";
+import img62 from "../../assets/mulching_cleanup-3.jpeg";
+import img63 from "../../assets/walk-drive-1.jpeg";
+import img64 from "../../assets/walk-drive-2.jpeg";
+import img65 from "../../assets/walkway-1.jpeg";
+import img66 from "../../assets/walkway-2.jpeg";
+import img67 from "../../assets/walkway-3.jpeg";
 
 // Importing Before & After Groups
 const projectGroups = [
@@ -77,8 +87,8 @@ const projectGroups = [
   },
   {
     title: "Mulching Cleanup",
-    coverImage: img11,
-    images: [img11],
+    coverImage: img60,
+    images: [img60, img61, img62, img11],
   },
   {
     title: "Landscaping",
@@ -96,9 +106,9 @@ const projectGroups = [
     images: [img17, img18],
   },
   {
-    title: "Snow Removal",
-    coverImage: img19,
-    images: [img20, img19],
+    title: "Walkway Installations",
+    coverImage: img67,
+    images: [img67, img66, img65],
   },
   {
     title: "Driveway Transformation",
@@ -118,7 +128,7 @@ const projectGroups = [
   {
     title: "Groundskeeping",
     coverImage: img34,
-    images: [img34, img35, img36],
+    images: [img34, img35, img36, img58, img59],
   },
   {
     title: "Outdoor Home Restoration",
@@ -129,6 +139,11 @@ const projectGroups = [
     title: "Pool Wall Construction",
     coverImage: img50,
     images: [img47, img48, img49, img50, img51, img52, img53, img54, img55, img56],
+  },
+  {
+    title: "Entryway Hardscaping",
+    coverImage: img63,
+    images: [img63, img64],
   },
 ]
 
