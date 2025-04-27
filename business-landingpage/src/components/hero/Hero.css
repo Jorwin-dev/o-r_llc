@@ -44,8 +44,8 @@
 }
 
 .hero-overlay h1 {
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
@@ -79,7 +79,59 @@ html, body {
     width: 100%;
     overflow-x: hidden; /* THIS IS CRITICAL */
 }
+
+
+
+
+.hero-subtext {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-btn {
+    margin-top: 10px;
+    padding: 7.5px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #d92332;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    /*Animation*/
+    opacity: 0;
+    animation: buttonFadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-btn:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+  }
   
+
+
+
+@keyframes buttonFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
 @media (max-width: 400px) {
     .hero-overlay {
       max-width: 90%;

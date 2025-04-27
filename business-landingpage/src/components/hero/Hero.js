@@ -15,9 +15,9 @@ const images = [img1, img2, img3, img4, img5, img6];
 const services = [
   "Softscaping",
   "Hardscaping",
-  "Seasonal Fall Maintenance",
-  "Snow Removal & Winter Services",
-  "Garden & Lawn Care",
+  "Fall Cleanup",
+  "Winter Services",
+  "Lawn & Garden Care",
   "Grass Laying & Sodding"
 ];
 
@@ -65,6 +65,8 @@ const Hero = () => {
       {/* Text Overlay */}
       <div className='hero-overlay'>
         <h1>{services[currentIndex]}</h1> {/* Dynamic text update */}
+        <p className='hero-subtext'>Free Estimates Available</p>
+        <button className='hero-btn' onClick={() => window.location.href='/contact'}>Contact Us</button>
       </div>
 
       {/* Loading Spinner */}
