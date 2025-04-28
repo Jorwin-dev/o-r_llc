@@ -84,10 +84,12 @@ const Contact = () => {
           ></iframe>
           </div>
       </div>
-      <div className='cities-served-box'>
-        <h3>We Serve the Greater Newton Area</h3>
-        <p>Click Below to see the full list of cities we serve!</p>
-        <button onClick={() => setShowCities(true)}>View Cities</button>
+      <div className='cities-served-wrapper'>
+        <div className='cities-served-box'>
+          <h3>We Serve the Greater Newton Area</h3>
+          <p>Click Below to see the full list of cities we serve!</p>
+          <button onClick={() => setShowCities(true)}>View Cities</button>
+        </div>
       </div>
       {/* Lightbox Modal */}
       {showCities && (
