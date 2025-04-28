@@ -11,6 +11,8 @@ const Contact = () => {
     message:'',
   });
 
+  const [showCities, setShowCities] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -82,6 +84,79 @@ const Contact = () => {
           ></iframe>
           </div>
       </div>
+      <div className='cities-served-box'>
+        <h3>We Serve the Greater Newton Area</h3>
+        <p>Click Below to see the full list of cities we serve!</p>
+        <button onClick={() => setShowCities(true)}>View Cities</button>
+      </div>
+      {/* Lightbox Modal */}
+      {showCities && (
+        <div className='cities-lightbox'>
+          <div className='cities-lightbox-content'>
+            <button className='close-btn' onClick={() =>
+              setShowCities(false)}>X</button>
+            <h2>Cities We Serve</h2>
+            <div className="cities-list">
+              <ul>
+                <li>Boston</li>
+                <li>Newton</li>
+                <li>Cambridge</li>
+                <li>Waltham</li>
+                <li>Brookline</li>
+                <li>Woburn</li>
+                <li>Somerville</li>
+                <li>Wellesley</li>
+                <li>Medford</li>
+                <li>Watertown</li>
+                <li>Arlington</li>
+                <li>Dorchester</li>
+                <li>Lexington</li>
+                <li>Needham</li>
+                <li>West Medford</li>
+                <li>Belmont</li>
+                <li>Burlington</li>
+                <li>Bedford</li>
+                <li>Dedham</li>
+                <li>West Roxbury</li>
+                <li>Newton Highlands</li>
+                <li>Auburndale</li>
+                <li>Everett</li>
+                <li>Hanscom AFB</li>
+                <li>Newton Lower Falls</li>
+                <li>Sudbury</li>
+                <li>Newton Upper Falls</li>
+                <li>Babson Park</li>
+                <li>Winchester</li>
+                <li>Jamaica Plain</li>
+                <li>Chestnut Hill</li>
+                <li>Newton Center</li>
+                <li>Allston</li>
+                <li>Needham Heights</li>
+                <li>Concord</li>
+                <li>West Newton</li>
+                <li>Weston</li>
+                <li>Brookline Village</li>
+                <li>Dover</li>
+                <li>Mattapan</li>
+                <li>Nonantum</li>
+                <li>Wellesley Hills</li>
+                <li>Natick</li>
+                <li>Lincoln</li>
+                <li>Waban</li>
+                <li>Brighton</li>
+                <li>Wayland</li>
+                <li>Charlestown</li>
+                <li>New Town</li>
+                <li>Waverley</li>
+                <li>East Boston</li>
+                <li>Arlington Heights</li>
+                <li>Roslindale</li>
+                <li>Westwood</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
