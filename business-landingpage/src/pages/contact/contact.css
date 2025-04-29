@@ -231,7 +231,8 @@
   align-self: flex-start;
   padding-left: 10%;
   cursor: pointer;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
+  gap: 40px;
 }
 
 /*ANIMATION*/
@@ -244,4 +245,36 @@
       opacity: 1;
       transform: translateY(0);
   }
+}
+
+.email-phone-box h3, 
+.hours-of-op-box h3 {
+  color: White;
+}
+
+.email-phone-box p, 
+.hours-of-op-box p {
+  color: White;
+}
+
+.email-phone-box {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+}
+
+.hours-of-op-box {
+  margin-top: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
 }

@@ -90,6 +90,19 @@ const Contact = () => {
           <p>Click Below to see the full list of cities we serve!</p>
           <button onClick={() => setShowCities(true)}>View Cities</button>
         </div>
+        <div className='email-phone-box'>
+          <h3>Contact Information</h3>
+          <p>Email: orlandscaping6@gmail.com</p>
+          <p>Phone Number: 781-839-0134</p>
+        </div>
+        <div className='hours-of-op-box'>
+          <h3>Hours of Operation</h3>
+          <p>Monday - Saturday: 7:00AM - 7:00PM</p>
+          <p>Sunday: 7:00AM - 5:00PM</p>
+        </div>
+      </div>
+      <div className='contact-hours-wrapper'>
+        
       </div>
       {/* Lightbox Modal */}
       {showCities && (
