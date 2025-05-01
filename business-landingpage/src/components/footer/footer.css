@@ -27,6 +27,8 @@
   height: 90px;
   max-width: 150px;
   transition: transform 0.3s ease-in-out;
+  align-self: center;
+  margin-left: 50px;
 }
 
 .footer-logo:hover {
@@ -47,18 +49,57 @@
   color: #ccc;
 }
 
-.payment-icon1 {
-  height: 25px;
+/*Payment Method Icons*/
+.visa-icon {
+  height: 35px;
   margin-left: 0px;
-  opacity: .85;
+  opacity: .75;
+  margin-right: -5px;
 }
 
-.payment-icon2 {
-  height: 25px;
+.master-icon {
+  height: 35px;
   margin-left: 0px;
-  opacity: .85;
+  opacity: .75;
+  margin-right: -10px;
 }
 
+.amex-icon {
+  height: 25px;
+  margin-left: 0px;
+  opacity: .75;
+  margin-right: -8px;
+}
+
+.discover-icon {
+  height: 25px;
+  margin-left: 0px;
+  opacity: .75;
+}
+
+.cash-icon {
+  height: 35px;
+  margin-left: 0px;
+  opacity: .75;
+}
+
+.cheque-icon {
+  height: 35px;
+  margin-left: 0px;
+  opacity: .75;
+}
+
+.venmo-icon {
+  height: 25px;
+  margin-left: 0px;
+  opacity: .75;
+}
+
+.zelle-icon {
+  height: 25px;
+  margin-left: 0px;
+  opacity: .75;
+}
   
   /* Right Side */
   .footer-right {
