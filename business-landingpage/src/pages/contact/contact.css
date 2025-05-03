@@ -2,7 +2,7 @@
 .contact-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -224,6 +224,7 @@
   font-size: 20px;
   cursor: pointer;
   color: white;
+  font-weight: 700;
 }
 
 .cities-served-wrapper {
@@ -278,3 +279,209 @@
   font-family: 'Poppins', sans-serif;
   max-width: 600px;
 }
+
+/*MEDIA QUERIES*/
+@media (max-width: 480px) {
+  .contact-content {
+    flex-direction: column;
+    width: 90%;
+    padding-top: 120px;
+  }
+
+  .cities-served-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .cities-served-box,
+  .email-phone-box,
+  .hours-of-op-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .contact-map iframe {
+    height: 250px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .cities-lightbox-content {
+    padding: 20px;
+    max-width: 95%;
+    width: 95%;
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-top: 50px;
+  }
+  
+  .cities-lightbox-content ul {
+    columns: 1;
+    text-align: center;
+  }
+  
+  .cities-lightbox-content h2 {
+    font-size: 20px;
+  }
+  
+  .cities-lightbox-content li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    width: 90%;
+    padding-top: 100px;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-map,
+  .cities-served-box,
+  .email-phone-box,
+  .hours-of-op-box {
+    max-width: 100%;
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .contact-map iframe {
+    height: 300px;
+  }
+
+  .cities-served-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-self: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cities-served-box button {
+    width: 100%;
+  }
+
+  .cities-lightbox-content ul {
+    columns: 2;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .cities-served-box,
+  .email-phone-box,
+  .hours-of-op-box {
+    margin: 0 auto;
+  }
+
+  .cities-lightbox-content {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cities-served-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    padding-top: 20px;
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+  }
+
+  .cities-served-box,
+  .email-phone-box,
+  .hours-of-op-box {
+    text-align: center;
+    min-width: 250px;
+    max-width: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%
+  }
+
+  .contact-form button {
+    font-size: 14px;
+  }
+  .cities-lightbox-content ul {
+    columns: 2;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .cities-lightbox-content h2 {
+    font-size: 35px;
+  }
+  
+  .cities-lightbox-content li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contact-content {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .email-phone-box p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contact-content {
+    width: 90%;
+  }
+
+  .cities-served-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    padding: 0px 5%;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .cities-lightbox-content ul {
+    columns: 2;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .cities-lightbox-content h2 {
+    font-size: 35px;
+  }
+  
+  .cities-lightbox-content li {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+

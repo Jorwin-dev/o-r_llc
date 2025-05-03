@@ -177,6 +177,7 @@
     .footer-logo {
       max-width: 100px;
       height: auto;
+      margin-right: 30px;
     }
   
     .footer-right a {
@@ -214,5 +215,7 @@
     .footer-logo {
       max-width: 100px;
       height: auto;
+      margin-right: 40px;
     }
   }
+  
