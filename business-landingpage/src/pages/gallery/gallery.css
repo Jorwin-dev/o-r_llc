@@ -200,6 +200,10 @@
   .lightbox-content {
     padding: 0 10px;
   }
+
+  .thumbnail-bar {
+    overflow-x: hidden;
+  }
 }
 
 

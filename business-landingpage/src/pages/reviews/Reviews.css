@@ -196,15 +196,19 @@ p, h1, h2 {
   }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 850px) {
     .reviews-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .review-form-container,
-    .reviews-list-container {
-        width: 90%;
+    .review-form,
+    .reviews-list {
+        width: 100%;
         max-width: 600px;
+    }
+
+    .reviews-container {
+        gap: 10px;
     }
 }
