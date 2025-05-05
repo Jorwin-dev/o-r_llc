@@ -6,7 +6,7 @@ import Gallery from './pages/gallery/gallery';
 import Contact from './pages/contact/contact';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
-import Reviews from './pages/reviews/reviews'
+import Reviews from './pages/reviews/reviews';
 import './App.css'; // Global Styles
 
 function App() {
