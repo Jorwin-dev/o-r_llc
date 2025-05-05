@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Reviews.css";
+import "./reviews.css";
 import StarRating from "../../components/rating/StarRating";
 const API_BASE = process.env.REACT_APP_BACKEND_URL;
 
