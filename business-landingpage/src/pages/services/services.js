@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './Services.css'; 
+import './services.css'; 
 
 const servicesData = [
     { id: 1, title: 'Fall Cleanup', image:  require('../../assets/O&R_Fall-6.JPG') },
