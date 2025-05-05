@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Contact.css';
+import './chequeLogoontact.css';
 const API_BASE = process.env.REACT_APP_BACKEND_URL;
 
 const Contact = () => {
