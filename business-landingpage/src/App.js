@@ -4,9 +4,9 @@ import Home from './pages/home/Home';
 import Services from './pages/services/services';
 import Gallery from './pages/gallery/gallery';
 import Contact from './pages/contact/contact';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
-import Reviews from './pages/reviews/Reviews'
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
+import Reviews from './pages/reviews/reviews'
 import './App.css'; // Global Styles
 
 function App() {
