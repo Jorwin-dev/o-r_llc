@@ -98,8 +98,8 @@ const Services = () => {
             {/* Key Features Section */}
             <section className="key-features">
                 <div className="feature">
-                    <span className="icon">📜</span>
-                    <p>Free Estimates</p>
+                    <span className="icon">♻️</span>
+                    <p>Eco-Friendly Services</p>
                 </div>
                 <div className="feature">
                     <span className="icon">🌎</span>
