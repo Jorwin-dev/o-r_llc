@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+const API_BASE = process.env.REACT_APP_BACKEND_URL;
 
 const Contact = () => {
 
@@ -20,7 +21,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/contact', {
+      const res = await fetch(`${API_BASE}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

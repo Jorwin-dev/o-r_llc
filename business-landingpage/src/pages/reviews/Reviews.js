@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Reviews.css";
 import StarRating from "../../components/rating/StarRating";
+const API_BASE = process.env.REACT_APP_BACKEND_URL;
+
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -12,7 +14,7 @@ const Reviews = () => {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch(`${API_BASE}/reviews`)
       .then((res) => res.json())
       .then((data) => setReviews(data))
       .catch((err) => console.error("Error fetching reviews:", err));
@@ -24,7 +26,7 @@ const Reviews = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/reviews", {
+    const response = await fetch(`${API_BASE}/reviews`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
